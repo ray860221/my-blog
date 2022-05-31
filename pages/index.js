@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Header from '../components/Header';
-import Link from 'next/link';
+import Block from '../components/Block';
+import List from '../components/List';
 import { getAllPostData } from '../src/posts';
 
 export async function getStaticProps() {
@@ -19,18 +20,17 @@ const Content = styled.div`
 `;
 
 const Home = ({ postData }) => {
+  const navItems = ['HOME', 'POSTS', 'PROFILE'];
+
   return (
     <Wrapper>
-      <Header />
+      <Header navItems={navItems} nowPage={'HOME'} />
       <Content>
-        {postData.map((post) => (
-          <div key={post.id}>
-            <div>
-              <h1 style={{ cursor: 'pointer' }}>{post.title}</h1>
-              <p>{post.date}</p>
-            </div>
-          </div>
-        ))}
+        <Block title={'POST'}>
+          {postData.map((post) => (
+            <List post={post} />
+          ))}
+        </Block>
       </Content>
     </Wrapper>
   );
