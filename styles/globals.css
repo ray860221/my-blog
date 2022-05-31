@@ -3,3 +3,13 @@ body {
     color: #5c5c5c;
     font-family: 'Roboto', sans-serif;
 }
+p > code, li > code {
+    background: rgba(135,131,120,0.15);
+    color: #EB5757;
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
+}
+pre {
+    background: rgba(135,131,120,0.15);
+    padding: 34px 16px 32px 32px;
+}
