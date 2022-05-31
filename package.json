@@ -7,14 +7,21 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier **/*.{js,jsx,ts,tsx} --write"
+    "prettier": "prettier {components,pages,src}/**/*.{js,jsx,ts,tsx} --write"
   },
   "dependencies": {
     "@fontsource/roboto": "^4.5.7",
+    "dayjs": "^1.11.2",
     "gray-matter": "^4.0.3",
     "next": "12.1.6",
+    "next-mdx-remote": "^4.0.3",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "reading-time": "^1.5.0",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-code-titles": "^1.1.0",
+    "rehype-highlight": "^5.0.2",
+    "rehype-slug": "^5.0.1",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
     "styled-components": "^5.3.5"
